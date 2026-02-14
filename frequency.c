@@ -5,13 +5,13 @@
 int main() {
     int n;
 
-    printf("Enter number of elements: ");
+    printf("Input the number of elements: ");
     scanf("%d", &n);
 
     int arr[n];
     int freq[MAX] = {0}; 
 
-    printf("Enter the numbers:\n");
+    printf("Input the values:\n");
     for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
 
@@ -23,7 +23,7 @@ int main() {
     int maxFreq = 0;
     int mostFrequent = -1;
 
-    printf("\nFrequency Table:\n");
+    printf("\nResultant frequency Table:\n");
     for(int i = 0; i < MAX; i++) {
         if(freq[i] > 0) {
             printf("%d -> %d %s\n", i, freq[i], ((freq[i] == 1)? "time" : "times"));
@@ -35,7 +35,7 @@ int main() {
         }
     }
 
-    printf("\nMost frequent: %d\n", mostFrequent);
+    printf("\nThe most frequent: %d\n", mostFrequent);
 
     return 0;
 }
