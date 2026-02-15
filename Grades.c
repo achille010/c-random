@@ -41,8 +41,21 @@ int main() {
 
     for (int i = 0; i < students; i++) {
         printf(" %d     %d        %d%%         %c\n",
-               i + 1, marks[i], perc[i], grade[i]);
+		i + 1, marks[i], perc[i], grade[i]);
     }
+    
+    printf("--------------------------------\n");
+    
+    int greatest = 0, least = 100000;
+    for(int i = 0; i < students; i ++){
+    	if(marks[i] > greatest) greatest = marks[i];
+	}
+	for(int i = 0; i < students; i ++){
+    	if(marks[i] < least) least = marks[i];
+	}
+    
+    printf("The largest mark: %d / %d\n", greatest, max);
+    printf("The  least  mark: %d / %d\n", least, max);
 
     printf("--------------------------------\n");
     return 0;
