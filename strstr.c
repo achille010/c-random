@@ -3,7 +3,7 @@
 
 int main(){
 	char first[30] = "Hello world!";
-	char second[30] = "Hello world!";
+	char second[30] = "hello world!";
 	
 	char *result = strstr(first, "Hello world");
 	char *lChar = strchr(first, 'l');
@@ -19,8 +19,12 @@ int main(){
 	if(fChar != NULL) printf("Found: %s\n", fChar);
 	else printf("Not Found!");
 	
-	const int comparResult = strcmp(first, second);
-	printf("%d", result);
+	int comparResult = strcmp(first, second);
+	printf("%d\n", comparResult);
+	
+	printf("%d\n", strlen(first));
+	
+	printf("%s", strcat(first, second));
 	
 	return 0;
 }
